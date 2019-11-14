@@ -13,1631 +13,6 @@
     <title>Instant access to investing, anytime and anywhere</title>
     <meta name="description" content="Investing has never been easier. Everything you are looking for in an ultimate investment platform — on the device of your choice.">
   
-    <style>
-        a,
-        button {
-            background: 0 0
-        }
-        
-        *,
-        input[type=checkbox] {
-            box-sizing: border-box
-        }
-        
-        .cookies-position {
-            visibility: hidden
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            font: inherit
-        }
-        
-        .section-subtitle,
-        .wrap {
-            margin-left: auto;
-            margin-right: auto
-        }
-        
-        [hidden] {
-            display: none
-        }
-        
-        html {
-            font-family: sans-serif;
-            -ms-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%;
-            -webkit-focus-ring-color: rgba(255, 255, 255, 0)
-        }
-        
-        a {
-            text-decoration: none
-        }
-        
-        :active,
-        :focus,
-        :hover {
-            outline: 0
-        }
-        
-        ul {
-            list-style: none
-        }
-        
-        img {
-            border: 0
-        }
-        
-        svg:not(:root) {
-            overflow: hidden
-        }
-        
-        button {
-            box-shadow: none;
-            border: none;
-            overflow: visible
-        }
-        
-        button,
-        input {
-            line-height: normal
-        }
-        
-        button {
-            text-transform: none
-        }
-        
-        .author__name,
-        .btn,
-        .inputs__item label,
-        .video__label {
-            text-transform: uppercase
-        }
-        
-        button {
-            -webkit-appearance: button
-        }
-        
-        button::-moz-focus-inner,
-        input::-moz-focus-inner {
-            border: 0;
-            padding: 0
-        }
-        
-        .section-subtitle,
-        .section-title,
-        .wrap {
-            width: 100%;
-            padding-left: 12px
-        }
-        
-        .nav,
-        .section-subtitle,
-        .section-title,
-        .wrap {
-            padding-right: 12px
-        }
-        
-        button,
-        input {
-            background-image: none
-        }
-        
-        input {
-            border-radius: 0;
-            box-shadow: none
-        }
-        
-        input {
-            resize: none
-        }
-        
-        .show-for-reg {
-            display: none!important
-        }
-        
-        body {
-            font-size: 100%;
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            background-color: #22293d;
-            color: #141415;
-            font-family: 'Open Sans', Roboto, Arial, sans-serif;
-            line-height: 1.4;
-            min-width: 280px
-        }
-        
-        .list-title,
-        .section-title {
-            font-family: Montserrat, Roboto, Arial, sans-serif
-        }
-        
-        .wrap {
-            max-width: 1270px
-        }
-        
-        .list-title {
-            font-size: 17px;
-            color: #141415;
-            line-height: 1.3;
-            font-weight: 600
-        }
-        
-        .list-text {
-            line-height: 1.55;
-            color: #4f566b;
-            font-size: 14px
-        }
-        
-        .section-title {
-            color: #141415;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 1.33
-        }
-        
-        .section-subtitle {
-            display: none;
-            color: #4f566b;
-            font-family: 'Open Sans', Roboto, Arial, sans-serif;
-            font-size: 17px;
-            font-weight: 400;
-            line-height: 1.5;
-            margin-top: 15px;
-            max-width: 810px
-        }
-        
-        .nav__lang {
-            color: #fff
-        }
-        
-        .btn,
-        .welcome__title {
-            font-family: Montserrat, Roboto, Arial, sans-serif
-        }
-        
-        .hide-desktop,
-        .show-desktop {
-            display: none
-        }
-        
-        .nav__lang .lang__input {
-            display: none
-        }
-        
-        .nav {
-            overflow: visible
-        }
-        
-        .nav__lang {
-            position: relative
-        }
-        
-        .nav__lang .lang__label {
-            display: block;
-            font-weight: 500;
-            padding: 10px 0
-        }
-        
-        .nav__lang .lang__label span {
-            display: -webkit-box;
-            display: flex;
-            flex-wrap: wrap;
-            -webkit-box-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            align-items: center
-        }
-        
-        .nav__lang .lang__label span:after {
-            content: '';
-            position: relative;
-            top: 2px;
-            margin-left: 5px;
-            display: block;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 6px 4px 0;
-            border-color: #fff transparent transparent
-        }
-        
-        .nav__lang .lang__menu {
-            background: #fff;
-            padding: 4px 0;
-            border-radius: 4px;
-            box-shadow: 0 -2px 6px 0 rgba(0, 0, 0, .2);
-            display: -webkit-box;
-            display: flex;
-            flex-wrap: wrap;
-            -webkit-box-pack: start;
-            justify-content: flex-start;
-            -webkit-box-align: start;
-            align-items: flex-start;
-            width: 250px
-        }
-        
-        .nav__lang .lang__menu:before {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            box-sizing: border-box;
-            border: 6px solid #000;
-            border-color: transparent transparent #fff #fff;
-            -webkit-transform-origin: 0 0;
-            transform-origin: 0 0;
-            -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
-            box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, .1);
-            right: 15px;
-            top: 1px
-        }
-        
-        .nav__lang .lang__menu--wrap {
-            position: absolute;
-            z-index: 3;
-            right: 0;
-            top: 100%;
-            height: 0;
-            overflow: hidden
-        }
-        
-        .nav__lang .lang__item {
-            display: block;
-            padding: 6.5px 16px;
-            color: #4f566b;
-            text-align: left;
-            white-space: nowrap;
-            font-size: 12px;
-            font-weight: 500;
-            width: 50%
-        }
-        
-        .btn {
-            color: #fff
-        }
-        
-        .btn-sticky__wrap {
-            background-color: #fff;
-            padding-bottom: 32px;
-            overflow-scrolling: touch
-        }
-        
-        .btn {
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-            max-width: 312px;
-            display: block;
-            border-radius: 3px;
-            background-color: #ff5a3e;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 22px;
-            padding: 15px 20px 13px;
-            position: relative;
-            z-index: 2
-        }
-        
-        .btn__wrap {
-            padding-left: 24px;
-            padding-right: 24px;
-            width: 100%;
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0)
-        }
-        
-        .btn span {
-            padding-right: 8px
-        }
-        
-        .header,
-        .nav {
-            background-color: #22293d
-        }
-        
-        .round-btn-sticky__wrap {
-            position: relative
-        }
-        
-        .round-btn__btn {
-            display: none;
-            position: sticky;
-            position: -webkit-sticky;
-            z-index: 3;
-            bottom: 55px;
-            right: 0
-        }
-        
-        .round-btn__btn .btn {
-            font-size: 0!important;
-            width: 50px;
-            height: 50px;
-            border-radius: 50px;
-            margin-right: 0;
-            position: absolute;
-            bottom: -25px;
-            right: 37px;
-            display: -webkit-box;
-            display: flex;
-            flex-wrap: wrap;
-            -webkit-box-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            align-items: center
-        }
-        
-        .round-btn__btn .btn span {
-            display: none
-        }
-        
-        .social__block {
-            margin-top: 24px;
-            display: -webkit-box;
-            display: flex;
-            flex-wrap: wrap;
-            -webkit-box-pack: justify;
-            justify-content: space-between;
-            -webkit-box-align: start;
-            align-items: flex-start
-        }
-        
-        .nav,
-        .social__btn {
-            display: -webkit-box;
-            flex-wrap: wrap
-        }
-        
-        .social__wrap {
-            margin-bottom: 15px;
-            width: 100%
-        }
-        
-        .social__btn {
-            border-radius: 3px;
-            border: 1px solid #8a8d94;
-            height: 50px;
-            display: flex;
-            -webkit-box-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            align-items: center;
-            width: 100%;
-            padding: 7px 20px
-        }
-        
-        .social__btn svg {
-            display: block!important
-        }
-        
-        .social__btn span {
-            display: block;
-            padding-left: 12px;
-            color: #161c2a;
-            font-size: 16px
-        }
-        
-        .header {
-            color: #fff;
-            overflow: hidden
-        }
-        
-        .nav {
-            padding-top: 16px;
-            padding-bottom: 19px;
-            display: flex;
-            -webkit-box-pack: justify;
-            justify-content: space-between;
-            -webkit-box-align: center;
-            align-items: center
-        }
-        
-        .nav .wrap {
-            display: -webkit-box;
-            display: flex;
-            flex-wrap: wrap;
-            -webkit-box-pack: justify;
-            justify-content: space-between;
-            -webkit-box-align: center;
-            align-items: center
-        }
-        
-        .nav .logo-color {
-            fill: #fff
-        }
-        
-        .nav__logo {
-            padding-left: 12px;
-            padding-right: 12px;
-            width: auto;
-            -webkit-box-flex: 1;
-            flex-grow: 1
-        }
-        
-        .nav__logo svg {
-            display: block
-        }
-        
-        .nav__btn {
-            display: none
-        }
-        
-        .nav__btn .btn {
-            padding: 9px 30px
-        }
-        
-        .advantages__item,
-        .preheader,
-        .welcome {
-            padding-left: 12px;
-            padding-right: 12px
-        }
-        
-        .welcome {
-            position: relative;
-            padding-bottom: 32%;
-            width: 100%
-        }
-        
-        .welcome__img {
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            position: absolute;
-            width: 120%;
-            left: -10%
-        }
-        
-        .welcome__title {
-            line-height: 1.3;
-            font-size: 27px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            margin-top: 20px
-        }
-        
-        .welcome__subtitle {
-            font-family: 'Open Sans', Roboto, Arial, sans-serif;
-            font-weight: 400;
-            line-height: 1.5;
-            margin-bottom: 25px
-        }
-        
-        .welcome .btn {
-            margin: 0;
-            max-width: 288px;
-            display: none
-        }
-        
-        .welcome__links {
-            margin-top: 43px;
-            margin-bottom: 30px;
-            display: none
-        }
-        
-        .welcome__link {
-            margin: 0 12px
-        }
-        
-        .preheader {
-            padding-top: 19px;
-            width: 100%;
-            font-size: 14px;
-            display: none
-        }
-        
-        .preheader__wrap {
-            display: -webkit-box;
-            display: flex;
-            -webkit-box-pack: justify;
-            justify-content: space-between;
-            -webkit-box-align: center;
-            align-items: center;
-            flex-wrap: nowrap;
-            min-height: 19px
-        }
-        
-        .advantages {
-            background-color: #fff;
-            padding-top: 24%;
-            padding-bottom: 48px
-        }
-        
-        .advantages__list {
-            display: -webkit-box;
-            display: flex;
-            flex-wrap: wrap;
-            -webkit-box-pack: start;
-            justify-content: flex-start;
-            -webkit-box-align: start;
-            align-items: flex-start
-        }
-        
-        .advantages .list-title {
-            background: url(lp/mobile/assets/images/icon_accept_v_02e3e55.svg) left top no-repeat;
-            padding-top: 28px;
-            background-size: 16px 16px;
-            margin-bottom: 8px;
-            max-width: 280px
-        }
-        
-        .advantages .list-text {
-            max-width: 280px
-        }
-        
-        .advantages__item {
-            width: 50%
-        }
-        
-        .advantages__item--3 {
-            display: none
-        }
-        
-        .owl-carousel {
-            display: none;
-            width: 100%;
-            z-index: 1
-        }
-        
-        .whats-hot {
-            padding-top: 70px;
-            padding-bottom: 70px
-        }
-        
-        .whats-hot .cards {
-            font-family: Montserrat, Lato, Roboto, Arial
-        }
-        
-        .assets {
-            padding-top: 48px
-        }
-        
-        .features__item .features__title {
-            font-family: Montserrat, Roboto, Arial, sans-serif;
-            font-size: 18px
-        }
-        
-        .owl-carousel {
-            position: static
-        }
-        
-        .assets {
-            overflow: hidden
-        }
-        
-        .assets {
-            background-color: #f4f4f6;
-            padding-bottom: 70px
-        }
-        
-        .assets #regText {
-            display: none
-        }
-        
-        .assets .owl-carousel {
-            max-width: 240px;
-            margin: 0
-        }
-        
-        .features .btn-non-regulated {
-            display: none
-        }
-        
-        .features .btn {
-            margin-top: 56px
-        }
-        
-        .features .owl-carousel {
-            max-width: 330px
-        }
-        
-        .clients__item,
-        .video__item {
-            background-repeat: no-repeat
-        }
-        
-        .access__form,
-        .features__img,
-        .features__img img,
-        .features__item .features__title,
-        .video__block {
-            margin-left: auto;
-            margin-right: auto
-        }
-        
-        .features__title {
-            color: #fff
-        }
-        
-        .features__slider {
-            width: 100%
-        }
-        
-        .features__item {
-            padding-left: 22px;
-            padding-right: 22px;
-            padding-top: 36px
-        }
-        
-        .features__item .features__title {
-            text-align: center;
-            font-weight: 700;
-            margin-bottom: 32px;
-            line-height: 1.47;
-            max-width: 240px
-        }
-        
-        .features__item:before {
-            content: '';
-            display: block;
-            width: 270px;
-            height: 270px;
-            border-radius: 270px;
-            background-color: #fff;
-            opacity: .06;
-            position: absolute;
-            left: 50%;
-            bottom: 10px;
-            -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0)
-        }
-        
-        .features__img {
-            position: relative;
-            text-align: center
-        }
-        
-        .features__img img {
-            width: 100%;
-            max-width: 220px;
-            position: relative;
-            display: block
-        }
-        
-        .video {
-            display: none;
-            padding-top: 60px;
-            padding-bottom: 60px
-        }
-        
-        .video__wrap {
-            display: -webkit-box;
-            display: flex;
-            flex-wrap: wrap;
-            -webkit-box-pack: center;
-            justify-content: center;
-            -webkit-box-align: start;
-            align-items: flex-start;
-            margin-top: 40px
-        }
-        
-        .video__block {
-            width: 100%;
-            max-width: 560px;
-            margin-bottom: 20px;
-            padding-left: 12px;
-            padding-right: 12px
-        }
-        
-        .video__item {
-            display: block;
-            width: 100%;
-            padding-bottom: 56%;
-            background-color: #000;
-            position: relative;
-            background-position: center center;
-            background-size: cover;
-            border-radius: 3px
-        }
-        
-        .video__label,
-        .video__title {
-            font-family: Montserrat, Roboto, Arial, sans-serif;
-            position: absolute;
-            left: 4%;
-            color: #fff
-        }
-        
-        .video__item--1 {
-            background-image: url(lp/mobile/assets/images/video1_preview_v_bac7485.jpg)
-        }
-        
-        .video__item--2 {
-            background-image: url(lp/mobile/assets/images/video2_preview_v_46c153f.jpg)
-        }
-        
-        .video__label {
-            background-color: #9481ff;
-            border-radius: 13px;
-            padding: 7px 12px 6px;
-            top: 7%;
-            font-size: 10px;
-            font-weight: 700
-        }
-        
-        .video__title {
-            font-weight: 600;
-            font-size: 14px;
-            max-width: 92%;
-            bottom: 6%
-        }
-        
-        .author__name,
-        .clients__item .quote,
-        .get-started .list-text,
-        .video__time {
-            font-family: 'Open Sans', Roboto, Arial, sans-serif
-        }
-        
-        .video__play-btn,
-        .video__play-btn:before {
-            position: absolute;
-            background-color: #fff;
-            left: 50%;
-            top: 50%
-        }
-        
-        .video__time {
-            color: #fff;
-            font-size: 12px;
-            font-weight: 700;
-            position: absolute;
-            right: 4%;
-            bottom: 7%
-        }
-        
-        .video__play-btn {
-            width: 44px;
-            height: 44px;
-            border-radius: 44px;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            color: #141415;
-            display: -webkit-box;
-            display: flex;
-            flex-wrap: wrap;
-            -webkit-box-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            align-items: center;
-            padding-left: 3px
-        }
-        
-        .video__play-btn:before {
-            height: 80px;
-            width: 80px;
-            border-radius: 80px;
-            opacity: .2;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            display: block;
-            content: ''
-        }
-        
-        .clients__item {
-            width: 100%;
-            background-image: url(lp/mobile/assets/images/icon_quote_v_7a4bd00.svg);
-            background-size: 16px 16px;
-            background-position: 18px 24px;
-            padding: 57px 16px 48px;
-            border-radius: 3px;
-            background-color: #fff;
-            position: relative
-        }
-        
-        .clients__item .quote {
-            color: #4f566b;
-            font-style: italic;
-            font-size: 14px;
-            line-height: 1.7;
-            margin-bottom: 33px
-        }
-        
-        .clients .owl-carousel {
-            max-width: 228px
-        }
-        
-        .author {
-            position: absolute;
-            left: 0;
-            width: 100%
-        }
-        
-        .author {
-            display: -webkit-box;
-            display: flex;
-            -webkit-box-pack: justify;
-            justify-content: space-between;
-            -webkit-box-align: center;
-            align-items: center;
-            flex-wrap: nowrap;
-            padding-left: 16px;
-            padding-right: 16px;
-            bottom: 16px
-        }
-        
-        .author__photo {
-            width: 32px;
-            height: 32px
-        }
-        
-        .author__name {
-            color: #232c41;
-            font-size: 12px;
-            font-weight: 700;
-            line-height: 14px
-        }
-        
-        .get-started .list-text {
-            color: #4f566b;
-            font-size: 15px;
-            line-height: 1.6
-        }
-        
-        .get-started .list-number {
-            color: #29b672;
-            font-size: 54px;
-            font-weight: 700;
-            font-family: Montserrat, Roboto, Arial, sans-serif;
-            display: none
-        }
-        
-        .get-started .list-title {
-            margin-bottom: 7px
-        }
-        
-        .get-started__item {
-            border-left: 1px dotted #29b672;
-            position: relative;
-            padding-left: 30px;
-            padding-bottom: 24px
-        }
-        
-        .get-started__item:after,
-        .get-started__item:before {
-            content: '';
-            display: block;
-            position: absolute
-        }
-        
-        .get-started__item:after {
-            background-color: #29b672;
-            width: 10px;
-            height: 10px;
-            border-radius: 10px;
-            top: 6px;
-            left: -5px
-        }
-        
-        .get-started__item:before {
-            width: 22px;
-            height: 22px;
-            border-radius: 22px;
-            background-color: #ced;
-            top: 0;
-            left: -11px
-        }
-        
-        .access__subtitle {
-            margin-bottom: 32px;
-            max-width: 700px
-        }
-        
-        .access .screen {
-            width: 100%;
-            max-width: 786px
-        }
-        
-        .access .platform {
-            text-align: center;
-            margin-top: 24px
-        }
-        
-        .access .desc {
-            margin-top: 16px;
-            color: #4f566b;
-            font-family: 'Open Sans', Roboto, Arial, sans-serif;
-            font-size: 12px;
-            text-align: center
-        }
-        
-        .access .desc li {
-            display: inline-block;
-            padding: 0 2px;
-            position: relative
-        }
-        
-        .access .btn__wrap {
-            padding-top: 32px
-        }
-        
-        .access__form {
-            width: 496px;
-            max-width: 100%;
-            margin-bottom: 20px;
-            padding-left: 12px;
-            padding-right: 12px;
-            position: relative
-        }
-        
-        .access__form .btn__wrap {
-            padding: 24px 0;
-            position: relative;
-            z-index: 1
-        }
-        
-        .access__form .submits .js-vld-msg {
-            bottom: 20px;
-            text-align: center;
-            width: 100%;
-            background-color: #fff
-        }
-        
-        .access__form .js-vld-msg {
-            position: absolute;
-            font-size: 12px;
-            color: #ff5a3e;
-            bottom: -5px;
-            -webkit-transform: translateY(100%);
-            transform: translateY(100%)
-        }
-        
-        .access__form .btn[type=submit] {
-            width: 100%;
-            max-width: 100%
-        }
-        
-        .authorized__title {
-            text-align: center;
-            margin-bottom: 20px;
-            margin-top: 40px
-        }
-        
-        .inputs__item {
-            width: 100%;
-            display: -webkit-box;
-            display: flex;
-            flex-wrap: wrap;
-            -webkit-box-pack: start;
-            justify-content: flex-start;
-            -webkit-box-align: start;
-            align-items: flex-start;
-            position: relative
-        }
-        
-        .inputs__item:after {
-            color: #fff;
-            font-weight: 700;
-            text-align: center;
-            line-height: 16px;
-            display: block;
-            width: 16px;
-            height: 16px;
-            position: absolute;
-            right: 16px;
-            border-radius: 16px;
-            bottom: 20px;
-            font-size: 12px
-        }
-        
-        .inputs__item label {
-            display: block;
-            width: 100%;
-            font-weight: 700;
-            color: #141415;
-            font-size: 14px;
-            margin-bottom: 5px;
-            margin-top: 24px
-        }
-        
-        .inputs__item--firstname,
-        .inputs__item--lastname {
-            display: none
-        }
-        
-        .inputs__field {
-            border: 1px solid #dadde4;
-            display: block;
-            width: 100%;
-            padding: 16px;
-            font-size: 16px;
-            color: #4f566b;
-            border-radius: 3px
-        }
-        
-        .inputs__field::-webkit-input-placeholder {
-            color: #aeb2be
-        }
-        
-        .agreement {
-            color: #949cb1;
-            font-size: 14px;
-            display: -webkit-box;
-            display: flex;
-            flex-wrap: wrap;
-            -webkit-box-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            align-items: center;
-            position: relative;
-            padding-left: 29px;
-            padding-right: 29px
-        }
-        
-        .agreement input {
-            display: none
-        }
-        
-        .agreement label {
-            position: relative
-        }
-        
-        .agreement label:after,
-        .agreement label:before {
-            position: absolute;
-            top: 50%;
-            content: ''
-        }
-        
-        .agreement label:before {
-            border: 1px solid #dadde4;
-            width: 16px;
-            height: 16px;
-            border-radius: 4px;
-            left: -28px;
-            -webkit-transform: translateY(-50%);
-            transform: translateY(-50%)
-        }
-        
-        .agreement label:after {
-            width: 8px;
-            height: 8px;
-            border-radius: 2px;
-            background-color: transparent;
-            left: -23px;
-            -webkit-transform: translateY(-50%);
-            transform: translateY(-50%)
-        }
-        
-        .agreement a {
-            color: inherit;
-            text-decoration: underline
-        }
-        
-        .footer a {
-            color: inherit;
-            margin-bottom: 10px;
-            display: inline-block;
-            padding-left: 7px;
-            padding-right: 7px;
-            z-index: 2;
-            position: relative
-        }
-        
-        button::-moz-focus-inner {
-            padding: 0;
-            border: 0
-        }
-        
-        .authorized {
-            display: none
-        }
-        
-        .authorized__title {
-            max-width: 450px;
-            font-style: italic;
-            opacity: .8;
-            margin-left: auto;
-            margin-right: auto
-        }
-        
-        .ios-unavailable-reg-success {
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 350px
-        }
-        
-        .animated {
-            -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both
-        }
-        
-        .registration_forbidden {
-            display: none
-        }
-        
-        .cookies-position {
-            background-color: #f1f1f1;
-            width: 100%;
-            opacity: 0;
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
-            height: 0
-        }
-        
-        .cookies-wrapper {
-            margin: 0 auto;
-            max-width: 1270px
-        }
-        
-        .cookies-block {
-            position: relative;
-            text-align: left;
-            padding: 10px 24px 9px;
-            font-size: 12px;
-            line-height: 17px;
-            width: 100%;
-            color: #4f566b;
-            display: -webkit-box;
-            display: flex;
-            -webkit-box-pack: justify;
-            justify-content: space-between;
-            -webkit-box-align: center;
-            align-items: center
-        }
-        
-        .cookies-text {
-            padding-right: 24px
-        }
-        
-        .cookies-text a {
-            color: #ff8b00;
-            font-weight: 500;
-            font-size: inherit
-        }
-        
-        #cookies-accept-btn {
-            display: inline-block;
-            border: 2px solid #979797;
-            color: #979797;
-            padding: 4px 30px;
-            border-radius: 13px;
-            font-weight: 600
-        }
-        
-        @font-face {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 700;
-            src: local('Montserrat Bold'), local('Montserrat-Bold'), url(lp/vendor/resources/fonts/montserrat/source/latin-700_1.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-        
-        @font-face {
-            font-family: 'Open Sans';
-            font-style: italic;
-            font-weight: 400;
-            src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v15/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-        
-        @font-face {
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-        
-        @font-face {
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 700;
-            src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-        
-        @font-face {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 500;
-            src: local('Montserrat Medium'), local('Montserrat-Medium'), url(lp/vendor/resources/fonts/montserrat/source/latin-500_1.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-        
-        @font-face {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 600;
-            src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(lp/vendor/resources/fonts/montserrat/source/latin-600_1.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-        
-        @media (prefers-reduced-motion) {
-            .animated {
-                -webkit-animation: unset!important;
-                animation: unset!important
-            }
-        }
-        
-        @media only screen and (min-width:400px) {
-            .section-subtitle {
-                display: block
-            }
-            .clients .owl-carousel {
-                max-width: 280px
-            }
-        }
-        
-        @media only screen and (min-width:480px) {
-            .social__wrap {
-                width: 49%
-            }
-            .welcome {
-                padding-bottom: 150px
-            }
-            .welcome__title {
-                font-size: 32px
-            }
-            .welcome__subtitle {
-                font-size: 17px;
-                margin-bottom: 32px
-            }
-            .advantages {
-                padding-top: 22%
-            }
-        }
-        
-        @media only screen and (min-width:500px) {
-            .assets .owl-carousel {
-                max-width: 450px
-            }
-        }
-        
-        @media only screen and (min-width:520px) {
-            .welcome__img {
-                left: 50%;
-                -webkit-transform: translate(-50%, 0);
-                transform: translate(-50%, 0);
-                width: 100%
-            }
-        }
-        
-        @media only screen and (min-width:580px) {
-            .clients .owl-carousel {
-                max-width: 560px
-            }
-        }
-        
-        @media only screen and (min-width:600px) {
-            .nav__lang {
-                color: #4f566b
-            }
-            .section-subtitle,
-            .section-title,
-            .welcome__title {
-                text-align: center
-            }
-            .nav__lang .lang__label span:after {
-                border-color: #4f566b transparent transparent
-            }
-            .nav .logo-color {
-                fill: #000
-            }
-            .nav {
-                background-color: #fff;
-                padding-top: 13px;
-                padding-bottom: 13px
-            }
-            .welcome .title__wrap {
-                margin-top: 40px;
-                max-width: 500px;
-                margin-left: auto;
-                margin-right: auto
-            }
-            .welcome__subtitle {
-                font-size: 18px;
-                text-align: center
-            }
-            .preheader {
-                display: block
-            }
-            .advantages {
-                padding-top: 120px
-            }
-            .features .owl-carousel {
-                max-width: 390px
-            }
-            .features__item:before {
-                width: 300px;
-                height: 300px;
-                border-radius: 300px
-            }
-        }
-        
-        @media only screen and (min-width:720px) {
-            .advantages__list {
-                -webkit-box-pack: justify;
-                justify-content: space-between
-            }
-        }
-        
-        @media only screen and (min-width:728px) {
-            .section-title {
-                font-size: 27px
-            }
-            .welcome .title__wrap {
-                max-width: 580px
-            }
-            .welcome__title {
-                font-size: 36px
-            }
-            .advantages__item {
-                width: 33.333333333333336%;
-                padding-left: 12px;
-                padding-right: 12px
-            }
-            .advantages__item--3 {
-                display: block
-            }
-            .features .owl-carousel {
-                max-width: 656px
-            }
-            .features__item:before {
-                width: 270px;
-                height: 270px;
-                border-radius: 300px
-            }
-            .footer a {
-                padding-left: 0;
-                padding-right: 14px
-            }
-        }
-        
-        @media only screen and (min-width:750px) {
-            .video__block {
-                width: 50%;
-                margin: 0
-            }
-        }
-        
-        @media only screen and (min-width:800px) {
-            .features__item .features__title {
-                min-height: 78px
-            }
-        }
-        
-        @media only screen and (min-width:820px) {
-            .assets .owl-carousel {
-                max-width: 680px;
-                margin-left: auto;
-                margin-right: auto
-            }
-        }
-        
-        @media only screen and (min-width:840px) {
-            .list-title {
-                font-size: 18px
-            }
-            .clients__item .quote,
-            .list-text {
-                font-size: 16px
-            }
-            .clients .owl-carousel {
-                max-width: 780px
-            }
-            .author__name {
-                font-size: 14px
-            }
-            .footer a {
-                padding-right: 24px
-            }
-        }
-        
-        @media only screen and (min-width:900px) {
-            .welcome .title__wrap {
-                margin: 0;
-                text-align: left;
-                width: 380px;
-                min-width: 380px;
-                padding-right: 24px
-            }
-            .welcome {
-                padding-bottom: 72px;
-                display: -webkit-box;
-                display: flex;
-                -webkit-box-pack: start;
-                justify-content: flex-start;
-                -webkit-box-align: center;
-                align-items: center;
-                padding-top: 80px;
-                flex-wrap: nowrap
-            }
-            .welcome__img {
-                position: relative;
-                left: auto;
-                right: auto;
-                max-width: 863px;
-                -webkit-transform: translate(0, 0);
-                transform: translate(0, 0)
-            }
-            .welcome__subtitle,
-            .welcome__title {
-                text-align: left
-            }
-            .welcome__links {
-                margin-bottom: 0
-            }
-            .welcome__link {
-                margin: 0 24px 0 0
-            }
-            .advantages {
-                background-color: #161a25;
-                padding-top: 32px;
-                padding-bottom: 31px
-            }
-            .advantages .list-title {
-                color: #fff
-            }
-            .advantages .list-text {
-                color: #aeb2be
-            }
-            .assets {
-                padding-top: 62px;
-                padding-bottom: 84px
-            }
-            .clients .owl-carousel {
-                margin-left: auto;
-                margin-right: auto
-            }
-            .get-started__item {
-                width: 25%;
-                padding-left: 0;
-                border-left: none;
-                border-top: 1px dotted #29b672;
-                padding-top: 27px;
-                padding-right: 24px
-            }
-            .get-started__item:after {
-                top: -5px;
-                left: 6px
-            }
-            .get-started__item:before {
-                left: 0;
-                top: -11px
-            }
-        }
-        
-        @media only screen and (min-width:960px) {
-            .round-btn__btn,
-            .welcome .btn {
-                display: block
-            }
-            .section-subtitle,
-            .video__title {
-                font-size: 18px
-            }
-            .nav__lang .lang__menu:before {
-                -webkit-transform: translateX(50%) rotate(135deg);
-                transform: translateX(50%) rotate(135deg);
-                right: auto;
-                left: 50%;
-                margin-left: 3px
-            }
-            .nav {
-                padding-top: 8px;
-                padding-bottom: 8px
-            }
-            .video {
-                padding-top: 96px;
-                padding-bottom: 96px
-            }
-            .features .owl-carousel {
-                max-width: 1200px;
-                margin-left: auto;
-                margin-right: auto
-            }
-            .features__img img {
-                max-width: 312px
-            }
-            .video__time {
-                font-size: 14px
-            }
-            .get-started .list-number {
-                display: block;
-                position: absolute;
-                top: -85px
-            }
-        }
-        
-        @media only screen and (min-width:1040px) {
-            .features__item:before {
-                width: 300px;
-                height: 300px;
-                border-radius: 300px
-            }
-        }
-        
-        @media only screen and (min-width:1100px) {
-            .assets .owl-carousel {
-                max-width: 960px
-            }
-        }
-        
-        @media only screen and (min-width:1150px) {
-            .welcome .title__wrap {
-                width: 420px;
-                min-width: 420px
-            }
-            .welcome__img {
-                max-width: 980px;
-                max-height: 420px
-            }
-        }
-        
-        @media only screen and (min-width:1200px) {
-            .section-title {
-                font-size: 36px
-            }
-            .assets {
-                padding-top: 96px
-            }
-            .clients .owl-carousel {
-                max-width: 1200px
-            }
-        }
-        
-        @media only screen and (min-width:1240px) {
-            .features__item:before {
-                width: 330px;
-                height: 330px;
-                border-radius: 330px
-            }
-        }
-        
-        @media only screen and (min-width:1280px) {
-            .nav__lang .lang__menu--wrap {
-                right: 50%;
-                -webkit-transform: translateX(50%);
-                transform: translateX(50%)
-            }
-            .welcome__title {
-                font-size: 40px
-            }
-        }
-        
-        @media only screen and (min-width:1350px) {
-            .assets .owl-carousel {
-                max-width: 1200px
-            }
-        }
-        
-        @media only screen and (min-height:600px) {
-            .nav__lang .lang__menu {
-                display: block;
-                width: auto
-            }
-            .nav__lang .lang__item {
-                width: 100%
-            }
-        }
-        
-        @media screen and (max-height:600px) {
-            .nav__lang .lang__menu {
-                width: 250px;
-                max-width: 90vw;
-                display: -webkit-box;
-                display: flex;
-                flex-wrap: wrap;
-                -webkit-box-pack: start;
-                justify-content: flex-start;
-                -webkit-box-align: start;
-                align-items: flex-start
-            }
-            .nav__lang .lang__menu--wrap {
-                left: auto;
-                right: 0;
-                -webkit-transform: translateX(0);
-                transform: translateX(0)
-            }
-        }
-    </style>
 </head>
 
 <body id="top">
@@ -1666,15 +41,7 @@
             <div class="wrap">
                 <div class="nav__logo">
                     <div class="logo">
-                        <svg viewbox="0 0 579 140" id="icon_general_logo-with-text-v2" width="144px" height="34px">
-                            <g fill="none" fill-rule="evenodd">
-                                <circle cx="70" cy="70" r="70" fill="#F70" />
-                                <rect width="17.5" height="65.625" x="59.063" y="42.656" fill="#FFF" rx="8.75" />
-                                <rect width="17.5" height="49.219" x="30.625" y="59.063" fill="#FFF" rx="8.75" />
-                                <rect width="17.5" height="80.938" x="87.5" y="27.344" fill="#FFF" rx="8.75" />
-                                <path class="logo-color" d="M176.694 40.404a9.587 9.587 0 0 1-3.745-.749 9.601 9.601 0 0 1-3.11-2.074 9.776 9.776 0 0 1-2.075-3.053c-.499-1.152-.749-2.42-.749-3.802 0-1.383.25-2.65.75-3.803a9.776 9.776 0 0 1 2.073-3.053 9.601 9.601 0 0 1 3.111-2.074 9.587 9.587 0 0 1 3.745-.75c2.689 0 4.993.942 6.914 2.824 1.92 1.882 2.88 4.167 2.88 6.856 0 2.688-.96 4.973-2.88 6.855-1.92 1.882-4.225 2.823-6.914 2.823zm-7.49 64.64V48.586H184.3v56.46h-15.094zm64.162 1.268v-8.066c-1.382 2.382-3.533 4.417-6.452 6.107-2.92 1.69-6.53 2.535-10.831 2.535-3.61 0-7.048-.749-10.313-2.247a27.571 27.571 0 0 1-8.641-6.222c-2.497-2.65-4.475-5.818-5.934-9.506-1.46-3.687-2.19-7.72-2.19-12.098 0-4.379.73-8.411 2.19-12.098 1.46-3.688 3.437-6.856 5.934-9.506a27.571 27.571 0 0 1 8.641-6.222 24.444 24.444 0 0 1 10.313-2.247c4.301 0 7.912.845 10.83 2.535 2.92 1.69 5.07 3.725 6.453 6.106l.006-6.798h15.088v81.348h-15.094v-23.62zm-14.172-13.366c1.997 0 3.898-.365 5.703-1.094a14.25 14.25 0 0 0 4.782-3.17c1.383-1.382 2.497-3.072 3.342-5.069.845-1.997 1.267-4.263 1.267-6.798s-.422-4.801-1.267-6.798c-.845-1.997-1.96-3.687-3.342-5.07a14.25 14.25 0 0 0-4.782-3.169 15.074 15.074 0 0 0-5.703-1.094c-1.997 0-3.899.384-5.704 1.152a15.013 15.013 0 0 0-4.782 3.226c-1.382 1.383-2.496 3.073-3.341 5.07-.845 1.997-1.267 4.225-1.267 6.683s.422 4.686 1.267 6.683c.845 1.997 1.959 3.687 3.341 5.07a15.013 15.013 0 0 0 4.782 3.226 14.417 14.417 0 0 0 5.704 1.152zm83.155-46.204c4.379 0 8.393.749 12.041 2.247 3.65 1.497 6.798 3.571 9.449 6.222 2.65 2.65 4.724 5.818 6.222 9.506 1.498 3.687 2.247 7.72 2.247 12.098 0 4.378-.75 8.411-2.247 12.098-1.498 3.688-3.572 6.856-6.222 9.506-2.65 2.65-5.8 4.724-9.449 6.222-3.648 1.498-7.662 2.247-12.04 2.247-4.379 0-8.393-.749-12.041-2.247-3.65-1.498-6.798-3.572-9.449-6.222-2.65-2.65-4.724-5.818-6.222-9.506-1.498-3.687-2.247-7.72-2.247-12.098 0-4.379.75-8.411 2.247-12.098 1.498-3.688 3.572-6.856 6.222-9.506 2.65-2.65 5.8-4.725 9.449-6.222 3.648-1.498 7.662-2.247 12.04-2.247zm0 46.204c1.92 0 3.784-.365 5.589-1.094a14.25 14.25 0 0 0 4.782-3.17c1.382-1.382 2.477-3.072 3.283-5.069.807-1.997 1.21-4.263 1.21-6.798s-.403-4.801-1.21-6.798c-.806-1.997-1.9-3.687-3.283-5.07a14.25 14.25 0 0 0-4.782-3.169 14.78 14.78 0 0 0-5.589-1.094c-1.997 0-3.879.365-5.645 1.094a14.405 14.405 0 0 0-4.725 3.169c-1.382 1.383-2.477 3.073-3.283 5.07-.807 1.997-1.21 4.263-1.21 6.798s.403 4.8 1.21 6.798c.806 1.997 1.9 3.687 3.283 5.07a14.405 14.405 0 0 0 4.725 3.169c1.766.73 3.648 1.094 5.645 1.094zm33.282-44.36h15.1v6.797c1.377-2.38 3.528-4.416 6.447-6.106 2.919-1.69 6.53-2.535 10.831-2.535 3.61 0 7.048.749 10.312 2.247a27.571 27.571 0 0 1 8.642 6.222c2.497 2.65 4.475 5.818 5.934 9.506 1.46 3.687 2.19 7.72 2.19 12.098 0 4.378-.73 8.411-2.19 12.098-1.46 3.688-3.437 6.856-5.934 9.506a27.571 27.571 0 0 1-8.642 6.222 24.444 24.444 0 0 1-10.312 2.247c-4.302 0-7.912-.845-10.831-2.535-2.919-1.69-5.07-3.725-6.452-6.107v31.686H335.63V48.586zm29.267 44.36c1.997 0 3.898-.384 5.704-1.152a15.013 15.013 0 0 0 4.781-3.226c1.383-1.383 2.497-3.073 3.342-5.07.845-1.997 1.267-4.225 1.267-6.683s-.422-4.686-1.267-6.683c-.845-1.997-1.959-3.687-3.342-5.07a15.013 15.013 0 0 0-4.781-3.226 14.417 14.417 0 0 0-5.704-1.152c-1.997 0-3.898.365-5.704 1.094a14.25 14.25 0 0 0-4.781 3.169c-1.383 1.383-2.497 3.073-3.342 5.07-.845 1.997-1.267 4.263-1.267 6.798s.422 4.8 1.267 6.798c.845 1.997 1.959 3.687 3.342 5.07a14.25 14.25 0 0 0 4.781 3.169 15.074 15.074 0 0 0 5.704 1.094zm38.467-31.456h-9.91V48.585h9.91V31.302h15.094v17.283h13.827V61.49h-13.827v21.893c0 1.306.134 2.515.403 3.63.27 1.113.788 2.054 1.556 2.822 1.075 1.23 2.612 1.844 4.609 1.844 1.306 0 2.343-.135 3.11-.404a9.727 9.727 0 0 0 2.19-1.094l4.263 13.25a24.885 24.885 0 0 1-5.703 1.902c-2.036.422-4.283.633-6.74.633-2.843 0-5.397-.441-7.663-1.325-2.266-.883-4.167-2.093-5.704-3.63-3.61-3.456-5.415-8.372-5.415-14.748V61.49zm43.652-21.086a9.587 9.587 0 0 1-3.745-.749 9.601 9.601 0 0 1-3.111-2.074 9.776 9.776 0 0 1-2.074-3.053c-.5-1.152-.75-2.42-.75-3.802 0-1.383.25-2.65.75-3.803a9.776 9.776 0 0 1 2.074-3.053 9.601 9.601 0 0 1 3.11-2.074 9.587 9.587 0 0 1 3.746-.75c2.688 0 4.993.942 6.913 2.824s2.88 4.167 2.88 6.856c0 2.688-.96 4.973-2.88 6.855-1.92 1.882-4.225 2.823-6.913 2.823zm-7.49 64.64V48.586h15.094v56.46h-15.094zm49.759-58.302c4.378 0 8.392.749 12.04 2.247 3.65 1.497 6.799 3.571 9.449 6.222 2.65 2.65 4.724 5.818 6.222 9.506 1.498 3.687 2.247 7.72 2.247 12.098 0 4.378-.749 8.411-2.247 12.098-1.498 3.688-3.572 6.856-6.222 9.506-2.65 2.65-5.8 4.724-9.448 6.222-3.65 1.498-7.663 2.247-12.041 2.247-4.379 0-8.392-.749-12.041-2.247-3.649-1.498-6.798-3.572-9.448-6.222-2.65-2.65-4.724-5.818-6.222-9.506-1.498-3.687-2.247-7.72-2.247-12.098 0-4.379.749-8.411 2.247-12.098 1.498-3.688 3.572-6.856 6.222-9.506 2.65-2.65 5.8-4.725 9.448-6.222 3.649-1.498 7.662-2.247 12.04-2.247zm0 46.204c1.92 0 3.783-.365 5.588-1.094a14.25 14.25 0 0 0 4.782-3.17c1.383-1.382 2.477-3.072 3.284-5.069.806-1.997 1.21-4.263 1.21-6.798s-.404-4.801-1.21-6.798c-.807-1.997-1.901-3.687-3.284-5.07a14.25 14.25 0 0 0-4.782-3.169 14.78 14.78 0 0 0-5.588-1.094c-1.997 0-3.88.365-5.646 1.094a14.405 14.405 0 0 0-4.724 3.169c-1.383 1.383-2.478 3.073-3.284 5.07-.807 1.997-1.21 4.263-1.21 6.798s.403 4.8 1.21 6.798c.806 1.997 1.901 3.687 3.284 5.07a14.405 14.405 0 0 0 4.724 3.169c1.767.73 3.649 1.094 5.646 1.094zm47.339-36.986h.922c1.766-2.843 4.148-5.09 7.144-6.741 2.995-1.652 6.414-2.477 10.254-2.477 3.534 0 6.645.576 9.333 1.728 2.689 1.152 4.897 2.785 6.626 4.897 1.728 2.112 3.034 4.647 3.917 7.605.884 2.957 1.325 6.241 1.325 9.851v34.222h-15.094V72.667c0-4.071-.902-7.086-2.708-9.045-1.805-1.959-4.436-2.938-7.892-2.938-2.074 0-3.899.441-5.473 1.325a12.778 12.778 0 0 0-4.033 3.572c-1.114 1.498-1.959 3.264-2.535 5.3-.576 2.036-.864 4.206-.864 6.51v27.654h-15.095v-56.46h14.173v7.375z" />
-                            </g>
-                        </svg>
+                        <img src="lp/mobile/assets/images/logo.svg" alt="Monfex">
                     </div>
                 </div>
                 
@@ -1690,25 +57,31 @@
                     <div class="title__wrap rtl-direction">
                         <h1 class="welcome__title rtl-direction">Instant access to investing, anytime and anywhere</h1>
                         <h2 class="welcome__subtitle rtl-direction">Investing has never been easier. Everything you are looking for in an ultimate investment platform — on the device of your choice.</h2>
-                        <div class="btn-non-regulated"><a class="btn access__btn js-btn-app" href="#reg"><span class="hide-desktop">Download app</span><span class="show-desktop">Get started for free</span><svg width="12px" height="14px"><use xlink:href="../assets/images/icon.svg?v=2b39980#icon_icon_download"/></svg></a></div>
                         <div class="links welcome__links">
                             <div class="welcome__link link__desktop-ios">
-                                <svg width="20px" height="23px">
-                                    <use xlink:href="../assets/images/icon.svg?v=2b39980#icon_desktop_ios" />
-                                </svg>
+                                <span style="display: block; width: 20px; height: 23px;">
+                                        <svg id="icon_desktop_ios" viewBox="0 0 21 24" width="100%" height="100%">
+                                                <path d="M19.7 18.703c-.362.839-.79 1.61-1.285 2.32-.675.968-1.228 1.637-1.654 2.009-.66.61-1.369.923-2.126.94-.545 0-1.2-.155-1.965-.47-.766-.314-1.47-.47-2.114-.47-.675 0-1.4.156-2.174.47-.776.315-1.401.48-1.88.496-.726.031-1.45-.29-2.173-.966-.462-.404-1.04-1.098-1.73-2.08-.743-1.049-1.353-2.265-1.83-3.652C.256 15.803 0 14.352 0 12.948 0 11.34.346 9.953 1.039 8.79a6.109 6.109 0 0 1 2.175-2.21 5.832 5.832 0 0 1 2.942-.835c.577 0 1.334.18 2.275.532.938.354 1.54.533 1.804.533.198 0 .867-.21 2.001-.628 1.073-.388 1.978-.548 2.72-.485 2.01.163 3.52.96 4.524 2.393-1.798 1.094-2.687 2.627-2.67 4.593.017 1.531.57 2.806 1.657 3.817a5.44 5.44 0 0 0 1.654 1.09c-.132.387-.273.758-.421 1.113zM15.09.48c0 1.2-.436 2.321-1.306 3.358-1.05 1.234-2.32 1.946-3.697 1.834a3.754 3.754 0 0 1-.028-.455c0-1.152.5-2.386 1.386-3.394.443-.51 1.006-.935 1.688-1.273.682-.334 1.326-.518 1.932-.55.018.16.025.32.025.48z" fill="#D3D5D8" fill-rule="nonzero"></path>
+                                        </svg>
+                                </span>
+                                    
                             </div>
                             <div class="welcome__link link__desktop-windows">
-                                <svg width="20px" height="20px">
-                                    <use xlink:href="../assets/images/icon.svg?v=2b39980#icon_desktop_windows" />
-                                </svg>
+                                    <span style="display: block; width: 20px; height: 23px;">
+                                            <svg id="icon_desktop_windows" viewBox="0 0 24 24" width="100%" height="100%">
+                                                    <path d="M0 3.398l9.778-1.332.004 9.432-9.773.056L0 3.398zm9.773 9.187l.008 9.44L.008 20.68l-.001-8.16 9.766.064zm1.185-10.693L23.923 0v11.378l-12.965.103V1.892zm12.968 10.781L23.923 24l-12.965-1.83-.018-9.518 12.986.021z" fill="#D3D5D8" fill-rule="nonzero"></path>
+                                                  </svg>
+                                    </span>
                             </div>
                             <div class="welcome__link link__web">
-                                <svg width="23px" height="22px">
-                                    <use xlink:href="../assets/images/icon.svg?v=2b39980#icon_web" />
-                                </svg>
+                                    <span style="display: block; width: 20px; height: 23px;">
+                                            <svg id="icon_web" viewBox="0 0 24 24" width="100%" height="100%">
+                                                    <path d="M11.999 7.49a4.5 4.5 0 1 1-.002 9 4.5 4.5 0 0 1 .002-9zm0 10.5c.426 0 .842-.046 1.243-.126L9.82 23.8a12.074 12.074 0 0 1-2.523-.752l-.303-.124-.063-.032a11.89 11.89 0 0 1-.638-.329L6 22.414l-.107-.069c-.223-.131-.44-.277-.656-.424l-.347-.237c-.193-.143-.378-.298-.564-.452l-.372-.312c-.148-.132-.289-.28-.431-.423-.142-.141-.287-.282-.422-.43l-.31-.372c-.156-.186-.311-.37-.453-.564l-.235-.35c-.147-.215-.293-.43-.425-.656l-.069-.108-.15-.293a12.485 12.485 0 0 1-.327-.639c-.08-.17-.149-.344-.221-.516-.073-.181-.146-.361-.211-.544a11.92 11.92 0 0 1-.198-.62l-.134-.477a12.975 12.975 0 0 1-.145-.67l-.081-.473a12.99 12.99 0 0 1-.078-.656l-.04-.523c-.01-.198-.013-.398-.013-.597 0-.2.004-.399.014-.598l.039-.523c.02-.218.045-.436.078-.656l.08-.473c.043-.224.09-.447.146-.67l.134-.477c.06-.208.124-.415.198-.62.065-.184.138-.365.211-.543l.221-.518c.102-.217.213-.429.327-.638l.463-.668.004.01 4.136 7.171a5.994 5.994 0 0 0 5.937 5.184zm11.957-6.818c.027.372.034.745.028 1.116l-.006.297c-.02.372-.056.74-.108 1.106l-.029.243c-.07.427-.163.848-.278 1.266l-.124.387c-.094.3-.196.598-.313.89l-.177.417c-.137.31-.289.613-.452.91l-.105.21-.057.085a11.966 11.966 0 0 1-1.858 2.395l-.166.168-.05.045c-.33.312-.673.608-1.04.886l-.022.017c-.382.285-.777.558-1.2.801-.471.273-.956.496-1.445.699l-.077.032-.049.016c-1.436.574-3.433.842-4.917.842l4.218-7.316a5.987 5.987 0 0 0 .292-9.135h7.081c.342.973.754 2.424.839 3.426l.015.197zm-1.57-5.181H12a6 6 0 0 0-5.702 4.138l-3.412-5.92.111-.136c.164-.187.338-.369.516-.547l.306-.298c.161-.15.327-.295.497-.438l.413-.329c.156-.118.315-.234.477-.347.166-.114.335-.221.505-.326L6 1.602l.195-.1c.171-.095.346-.181.52-.267.18-.09.359-.18.54-.257L7.677.81c.22-.087.44-.174.663-.246l.182-.05C9.402.25 10.297.09 11.192.03L11.599 0l.52.003c.213.003.424.001.635.015l.404.041c.247.023.493.048.74.088l.356.07c.252.05.505.1.755.165l.383.11c.23.071.46.14.686.222l.47.187c.187.077.374.154.56.24.192.091.379.192.566.293l.325.17.085.056c.427.25.84.524 1.236.829l.078.066c.355.278.693.583 1.02.903l.2.207c.297.306.578.631.844.974l.097.12c.295.391.576.797.827 1.232z" fill="#D3D5D8" fill-rule="evenodd"></path>
+                                                  </svg>
+                                    </span>
                             </div>
                         </div>
-                    </div><img class="welcome__img js-change-img-src" data-src="https://static.cdnpub.info/lp/mobile/assets/images/header__img--ios.png?v=9b27e48" src="lp/mobile/assets/images/empty.png" alt="Instant access to investing, anytime and anywhere"></div>
+                    </div><img class="welcome__img js-change-img-src" data-src="lp/mobile/assets/images/header__img--ios.png?v=9b27e48" src="lp/mobile/assets/images/empty.png" alt="Instant access to investing, anytime and anywhere"></div>
             </div>
             <div class="advantages">
                 <div class="wrap">
@@ -1737,7 +110,562 @@
                     <div class="section-subtitle">From established industries to booming new age up-and-comers — pick from over a dozen of different routes to a smart investment.</div>
                 </div>
                 <div class="assets__slider"><span id="regText">Download</span>
-                    <div class="cards owl-carousel" id="js-cards"></div>
+                    <div class="cards owl-carousel owl-theme" id="js-cards">
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/06114a1161c2b9g2b3.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/7f9a95314.svg?v=1">
+                                    </div>
+                
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">Crude Oil Brent</div>
+                                    </div>
+                                    <div class="card__title--price">$61.99</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__ukousd">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,52.745L2.186,63.245L4.372,45.5L6.558,43.26L8.744,31.29L10.93,33.81L13.115,29.54L15.301,46.375L17.487,51.24L19.673,44.52L21.859,41.44L24.045,39.62L26.231,41.09L28.417,38.815L30.603,33.355L32.789,41.02L34.974,21.7L37.16,23.52L39.346,29.33L41.532,37.03L43.718,34.02L45.904,35L48.09,37.03L50.276,32.55L52.462,28.455L54.648,24.64L56.834,20.23L59.019,26.88L61.205,26.32L63.391,26.18L65.577,24.43L67.763,24.71L69.949,23.59L72.135,30.24L74.321,29.12L76.507,22.82L78.693,13.23L80.879,4.06L83.064,7.42L85.25,3.15L87.436,2.8L89.622,5.88L91.808,9.835L93.994,11.55L96.18,18.76L98.366,11.55L100.552,14.14L102.738,7.7L104.923,8.68L107.109,19.81L107.109,70Z" class="ct-area"></path>
+                                                        <path d="M0,52.745L2.186,63.245L4.372,45.5L6.558,43.26L8.744,31.29L10.93,33.81L13.115,29.54L15.301,46.375L17.487,51.24L19.673,44.52L21.859,41.44L24.045,39.62L26.231,41.09L28.417,38.815L30.603,33.355L32.789,41.02L34.974,21.7L37.16,23.52L39.346,29.33L41.532,37.03L43.718,34.02L45.904,35L48.09,37.03L50.276,32.55L52.462,28.455L54.648,24.64L56.834,20.23L59.019,26.88L61.205,26.32L63.391,26.18L65.577,24.43L67.763,24.71L69.949,23.59L72.135,30.24L74.321,29.12L76.507,22.82L78.693,13.23L80.879,4.06L83.064,7.42L85.25,3.15L87.436,2.8L89.622,5.88L91.808,9.835L93.994,11.55L96.18,18.76L98.366,11.55L100.552,14.14L102.738,7.7L104.923,8.68L107.109,19.81" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+0.76%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/05615825f2a8d5j9i1.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/8182f1dda.svg?v=1">
+                                    </div>
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">EQT Corp</div>
+                                    </div>
+                                    <div class="card__title--price">$10.48</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__eqtus">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,56L2.202,48.3L4.404,44.8L6.607,44.8L8.809,37.8L11.011,37.8L13.213,39.2L15.415,43.05L17.617,49.7L19.82,47.6L22.022,44.1L24.224,40.6L26.426,44.1L28.628,39.9L30.83,35L33.033,40.6L35.235,38.5L37.437,44.1L39.639,44.8L41.841,42.7L44.043,45.5L46.246,49L48.448,46.9L50.65,54.25L52.852,52.5L55.054,61.95L57.256,62.3L59.459,64.4L61.661,65.1L63.863,60.9L66.065,58.1L68.267,60.2L70.469,58.1L72.672,60.2L74.874,56L77.076,53.9L79.278,53.9L81.48,45.5L83.682,43.4L85.885,26.95L88.087,43.75L90.289,52.5L92.491,45.85L94.693,36.05L96.895,29.05L99.098,18.9L101.3,23.8L103.502,28L105.704,17.5L107.906,8.75L107.906,70Z" class="ct-area"></path>
+                                                        <path d="M0,56L2.202,48.3L4.404,44.8L6.607,44.8L8.809,37.8L11.011,37.8L13.213,39.2L15.415,43.05L17.617,49.7L19.82,47.6L22.022,44.1L24.224,40.6L26.426,44.1L28.628,39.9L30.83,35L33.033,40.6L35.235,38.5L37.437,44.1L39.639,44.8L41.841,42.7L44.043,45.5L46.246,49L48.448,46.9L50.65,54.25L52.852,52.5L55.054,61.95L57.256,62.3L59.459,64.4L61.661,65.1L63.863,60.9L66.065,58.1L68.267,60.2L70.469,58.1L72.672,60.2L74.874,56L77.076,53.9L79.278,53.9L81.48,45.5L83.682,43.4L85.885,26.95L88.087,43.75L90.289,52.5L92.491,45.85L94.693,36.05L96.895,29.05L99.098,18.9L101.3,23.8L103.502,28L105.704,17.5L107.906,8.75" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+3.28%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/06559b7f94i3g3e4d2.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/815abb24a.svg?v=1">
+                                    </div>
+                
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">The Walt Disney Company</div>
+                                    </div>
+                                    <div class="card__title--price">$147.62</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__disus">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,52.564L2.234,52.535L4.467,52.547L6.701,53.392L8.935,53.742L11.169,53.317L13.402,53.089L15.636,52.792L17.87,48.446L20.104,46.591L22.337,43.692L24.571,40.244L26.805,40.343L29.039,39.194L31.272,38.663L33.506,37.852L35.74,36.347L37.974,35.63L40.207,34.201L42.441,35.583L44.675,33.198L46.908,32.877L49.142,32.148L51.376,32.684L53.61,33.431L55.843,34.23L58.077,33.682L60.311,31.675L62.545,30.8L64.778,29.913L67.012,27.86L69.246,26.851L71.48,24.587L73.713,25.142L75.947,26.285L78.181,25.702L80.415,26.308L82.648,25.871L84.882,26.303L87.116,26.332L89.349,24.844L91.583,26.227L93.817,25.707L96.051,24.354L98.284,22.593L100.518,26.717L102.752,26.273L104.986,26.186L107.219,26.075L109.453,26.857L109.453,70Z" class="ct-area"></path>
+                                                        <path d="M0,52.564L2.234,52.535L4.467,52.547L6.701,53.392L8.935,53.742L11.169,53.317L13.402,53.089L15.636,52.792L17.87,48.446L20.104,46.591L22.337,43.692L24.571,40.244L26.805,40.343L29.039,39.194L31.272,38.663L33.506,37.852L35.74,36.347L37.974,35.63L40.207,34.201L42.441,35.583L44.675,33.198L46.908,32.877L49.142,32.148L51.376,32.684L53.61,33.431L55.843,34.23L58.077,33.682L60.311,31.675L62.545,30.8L64.778,29.913L67.012,27.86L69.246,26.851L71.48,24.587L73.713,25.142L75.947,26.285L78.181,25.702L80.415,26.308L82.648,25.871L84.882,26.303L87.116,26.332L89.349,24.844L91.583,26.227L93.817,25.707L96.051,24.354L98.284,22.593L100.518,26.717L102.752,26.273L104.986,26.186L107.219,26.075L109.453,26.857" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+8.01%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/061186efa5d3g0g9g7.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/7f9b89847.svg?v=1">
+                                    </div>
+                
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">Crude Oil WTI</div>
+                                    </div>
+                                    <div class="card__title--price">$57.19</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__usousd">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,57.225L2.261,66.588L4.522,54.95L6.783,49.963L9.045,44.713L11.306,33.425L13.567,35.35L15.828,60.944L18.089,55.825L20.35,53.9L22.612,51.625L24.873,53.55L27.134,34.65L29.395,44.013L31.656,47.031L33.917,36.313L36.179,41.694L38.44,41.125L40.701,45.325L42.962,15.663L45.223,22.531L47.484,41.3L49.746,38.063L52.007,36.575L54.268,39.288L56.529,36.4L58.79,32.988L61.051,27.65L63.313,23.231L65.574,29.75L67.835,29.75L70.096,28.438L72.357,23.406L74.618,25.9L76.879,32.944L79.141,36.487L81.402,30.188L83.663,28.963L85.924,13.738L88.185,15.75L90.446,7.919L92.708,10.894L94.969,20.125L97.23,22.662L99.491,25.9L101.752,30.888L104.013,24.237L106.275,24.019L108.536,19.075L110.797,26.95L110.797,70Z" class="ct-area"></path>
+                                                        <path d="M0,57.225L2.261,66.588L4.522,54.95L6.783,49.963L9.045,44.713L11.306,33.425L13.567,35.35L15.828,60.944L18.089,55.825L20.35,53.9L22.612,51.625L24.873,53.55L27.134,34.65L29.395,44.013L31.656,47.031L33.917,36.313L36.179,41.694L38.44,41.125L40.701,45.325L42.962,15.663L45.223,22.531L47.484,41.3L49.746,38.063L52.007,36.575L54.268,39.288L56.529,36.4L58.79,32.988L61.051,27.65L63.313,23.231L65.574,29.75L67.835,29.75L70.096,28.438L72.357,23.406L74.618,25.9L76.879,32.944L79.141,36.487L81.402,30.188L83.663,28.963L85.924,13.738L88.185,15.75L90.446,7.919L92.708,10.894L94.969,20.125L97.23,22.662L99.491,25.9L101.752,30.888L104.013,24.237L106.275,24.019L108.536,19.075L110.797,26.95" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+0.6%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/04b79cbe25e0g0g9g0.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/bef341bf42e4f3h4h1.svg?v=1">
+                                    </div>
+                
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">MercadoLibre Inc</div>
+                                    </div>
+                                    <div class="card__title--price">$534.45</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__meli">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,48.567L2.261,48.291L4.522,48.545L6.783,52.351L9.045,55.278L11.306,53.616L13.567,51.424L15.828,45.99L18.089,51.848L20.35,49.752L22.612,51.778L24.873,50.781L27.134,50.391L29.395,50.601L31.656,51.516L33.917,49.91L36.179,51.118L38.44,49.284L40.701,49.271L42.962,47.141L45.223,45.014L47.484,47.075L49.746,46.41L52.007,49.726L54.268,51.848L56.529,51.962L58.79,51.87L61.051,51.415L63.313,48.016L65.574,47.009L67.835,47.849L70.096,45.115L72.357,46.476L74.618,45.517L76.879,46.182L79.141,44.428L81.402,46.476L83.663,45.439L85.924,46.108L88.185,41.514L90.446,33.871L92.708,31.924L94.969,26.198L97.23,19.827L99.491,14.293L101.752,5.421L104.013,14.052L106.275,9.201L108.536,7.967L110.797,2.852L110.797,70Z" class="ct-area"></path>
+                                                        <path d="M0,48.567L2.261,48.291L4.522,48.545L6.783,52.351L9.045,55.278L11.306,53.616L13.567,51.424L15.828,45.99L18.089,51.848L20.35,49.752L22.612,51.778L24.873,50.781L27.134,50.391L29.395,50.601L31.656,51.516L33.917,49.91L36.179,51.118L38.44,49.284L40.701,49.271L42.962,47.141L45.223,45.014L47.484,47.075L49.746,46.41L52.007,49.726L54.268,51.848L56.529,51.962L58.79,51.87L61.051,51.415L63.313,48.016L65.574,47.009L67.835,47.849L70.096,45.115L72.357,46.476L74.618,45.517L76.879,46.182L79.141,44.428L81.402,46.476L83.663,45.439L85.924,46.108L88.185,41.514L90.446,33.871L92.708,31.924L94.969,26.198L97.23,19.827L99.491,14.293L101.752,5.421L104.013,14.052L106.275,9.201L108.536,7.967L110.797,2.852" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+5.1%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/04c7701ba1d2j6i4g3.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/6c11742a4.svg?v=1">
+                                    </div>
+                
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">ProShares UltraShort QQQ</div>
+                                    </div>
+                                    <div class="card__title--price">$26.48</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__qid">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,47.25L2.155,42.875L4.309,46.375L6.464,44.625L8.619,40.25L10.773,44.625L12.928,53.375L15.083,56L17.237,49.875L19.392,52.5L21.547,56L23.701,52.5L25.856,52.5L28.011,56L30.165,58.625L32.32,55.125L34.474,56.875L36.629,55.563L38.784,51.625L40.938,52.5L43.093,54.25L45.248,53.375L47.402,56L49.557,26.25L51.712,23.625L53.866,17.5L56.021,18.375L58.176,28L60.33,34.125L62.485,37.625L64.64,39.375L66.794,44.625L68.949,46.813L71.104,47.25L73.258,47.25L75.413,43.75L77.568,42L79.722,37.625L81.877,42.875L84.032,31.5L86.186,21.875L88.341,28.875L90.496,28.875L92.65,39.375L94.805,36.75L96.96,35.875L99.114,27.125L101.269,25.375L103.423,21L105.578,7L105.578,70Z" class="ct-area"></path>
+                                                        <path d="M0,47.25L2.155,42.875L4.309,46.375L6.464,44.625L8.619,40.25L10.773,44.625L12.928,53.375L15.083,56L17.237,49.875L19.392,52.5L21.547,56L23.701,52.5L25.856,52.5L28.011,56L30.165,58.625L32.32,55.125L34.474,56.875L36.629,55.563L38.784,51.625L40.938,52.5L43.093,54.25L45.248,53.375L47.402,56L49.557,26.25L51.712,23.625L53.866,17.5L56.021,18.375L58.176,28L60.33,34.125L62.485,37.625L64.64,39.375L66.794,44.625L68.949,46.813L71.104,47.25L73.258,47.25L75.413,43.75L77.568,42L79.722,37.625L81.877,42.875L84.032,31.5L86.186,21.875L88.341,28.875L90.496,28.875L92.65,39.375L94.805,36.75L96.96,35.875L99.114,27.125L101.269,25.375L103.423,21L105.578,7" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+0.87%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/04e5dbb607h0f1a5i0.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/78d1b8b60.svg?v=1">
+                                    </div>
+                
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">SPDR S&amp;P Oil &amp; Gas Explor &amp; Product</div>
+                                    </div>
+                                    <div class="card__title--price">$21.95</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__xop">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,40.6L2.235,30.1L4.469,26.6L6.704,26.6L8.939,25.9L11.173,16.1L13.408,14L15.643,18.9L17.878,28L20.112,28.7L22.347,21.7L24.582,21.7L26.816,18.9L29.051,15.4L31.286,9.8L33.52,16.1L35.755,14L37.99,24.5L40.224,27.3L42.459,25.9L44.694,30.1L46.929,33.6L49.163,32.9L51.398,45.5L53.633,45.5L55.867,58.8L58.102,58.1L60.337,57.4L62.571,56L64.806,48.3L67.041,44.8L69.276,49.7L71.51,51.8L73.745,55.3L75.98,55.3L78.214,53.9L80.449,53.9L82.684,49L84.918,46.55L87.153,18.2L89.388,30.1L91.622,35L93.857,44.8L96.092,39.2L98.327,32.9L100.561,25.2L102.796,32.2L105.031,41.3L107.265,35L109.5,28L109.5,70Z" class="ct-area"></path>
+                                                        <path d="M0,40.6L2.235,30.1L4.469,26.6L6.704,26.6L8.939,25.9L11.173,16.1L13.408,14L15.643,18.9L17.878,28L20.112,28.7L22.347,21.7L24.582,21.7L26.816,18.9L29.051,15.4L31.286,9.8L33.52,16.1L35.755,14L37.99,24.5L40.224,27.3L42.459,25.9L44.694,30.1L46.929,33.6L49.163,32.9L51.398,45.5L53.633,45.5L55.867,58.8L58.102,58.1L60.337,57.4L62.571,56L64.806,48.3L67.041,44.8L69.276,49.7L71.51,51.8L73.745,55.3L75.98,55.3L78.214,53.9L80.449,53.9L82.684,49L84.918,46.55L87.153,18.2L89.388,30.1L91.622,35L93.857,44.8L96.092,39.2L98.327,32.9L100.561,25.2L102.796,32.2L105.031,41.3L107.265,35L109.5,28" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+0.41%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/04e7e0bbe5b4h9b8a1.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/6a4acc1b2.svg?v=1">
+                                    </div>
+                
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">iShares U.S. Real Estate ETF</div>
+                                    </div>
+                                    <div class="card__title--price">$91.97</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__iyr">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,55.563L2.183,64.313L4.367,68.688L6.55,63.438L8.733,64.75L10.917,66.938L13.1,67.375L15.283,59.938L17.467,58.625L19.65,52.5L21.834,52.5L24.017,54.25L26.2,59.938L28.384,56.875L30.567,57.094L32.75,61.688L34.934,58.625L37.117,56L39.3,56L41.484,54.688L43.667,54.25L45.85,55.563L48.034,52.5L50.217,64.969L52.401,58.844L54.584,55.125L56.767,59.062L58.951,56.437L61.134,57.75L63.317,56.875L65.501,52.063L67.684,50.313L69.867,54.25L72.051,52.063L74.234,56.437L76.417,56.875L78.601,50.75L80.784,54.25L82.967,60.156L85.151,32.813L87.334,21.219L89.518,25.813L91.701,17.937L93.884,19.688L96.068,22.75L98.251,23.406L100.434,13.125L102.618,10.5L104.801,13.563L106.984,4.812L106.984,70Z" class="ct-area"></path>
+                                                        <path d="M0,55.563L2.183,64.313L4.367,68.688L6.55,63.438L8.733,64.75L10.917,66.938L13.1,67.375L15.283,59.938L17.467,58.625L19.65,52.5L21.834,52.5L24.017,54.25L26.2,59.938L28.384,56.875L30.567,57.094L32.75,61.688L34.934,58.625L37.117,56L39.3,56L41.484,54.688L43.667,54.25L45.85,55.563L48.034,52.5L50.217,64.969L52.401,58.844L54.584,55.125L56.767,59.062L58.951,56.437L61.134,57.75L63.317,56.875L65.501,52.063L67.684,50.313L69.867,54.25L72.051,52.063L74.234,56.437L76.417,56.875L78.601,50.75L80.784,54.25L82.967,60.156L85.151,32.813L87.334,21.219L89.518,25.813L91.701,17.937L93.884,19.688L96.068,22.75L98.251,23.406L100.434,13.125L102.618,10.5L104.801,13.563L106.984,4.812" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+0.63%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/04cfd1d6f6g5e5c2e6.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/78942b468.svg?v=1">
+                                    </div>
+                
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">SPDR Select Sector Fund - Utilities</div>
+                                    </div>
+                                    <div class="card__title--price">$62.83</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__xlu">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,61L2.143,57.5L4.286,59L6.429,58L8.571,65.5L10.714,66L12.857,67L15,65L17.143,65.5L19.286,59.5L21.429,63.5L23.571,60.5L25.714,61.5L27.857,60.5L30,60L32.143,63L34.286,65L36.429,62.5L38.571,64.5L40.714,63.5L42.857,62.5L45,63.5L47.143,62L49.286,61L51.429,53L53.571,52.5L55.714,55L57.857,54.5L60,54L62.143,57.5L64.286,51L66.429,52L68.571,52.5L70.714,51.5L72.857,48L75,48L77.143,45.5L79.286,54L81.429,55L83.571,47L85.714,37L87.857,33.5L90,21.5L92.143,34.5L94.286,35L96.429,40L98.571,29.5L100.714,27L102.857,20.5L105,8.5L105,70Z" class="ct-area"></path>
+                                                        <path d="M0,61L2.143,57.5L4.286,59L6.429,58L8.571,65.5L10.714,66L12.857,67L15,65L17.143,65.5L19.286,59.5L21.429,63.5L23.571,60.5L25.714,61.5L27.857,60.5L30,60L32.143,63L34.286,65L36.429,62.5L38.571,64.5L40.714,63.5L42.857,62.5L45,63.5L47.143,62L49.286,61L51.429,53L53.571,52.5L55.714,55L57.857,54.5L60,54L62.143,57.5L64.286,51L66.429,52L68.571,52.5L70.714,51.5L72.857,48L75,48L77.143,45.5L79.286,54L81.429,55L83.571,47L85.714,37L87.857,33.5L90,21.5L92.143,34.5L94.286,35L96.429,40L98.571,29.5L100.714,27L102.857,20.5L105,8.5" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+0.84%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/04cc164f07e1b3j3d4.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/5e82e7b68.svg?v=1">
+                                    </div>
+                
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">ProShares UltraPro Short QQQ</div>
+                                    </div>
+                                    <div class="card__title--price">$26.82</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__sqqq">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,48.417L2.261,43.75L4.522,46.958L6.783,45.5L9.045,42L11.306,44.917L13.567,54.25L15.828,56.583L18.089,51.333L20.35,54.25L22.612,58.333L24.873,53.667L27.134,53.667L29.395,57.75L31.656,58.917L33.917,56.583L36.179,58.333L38.44,57.167L40.701,53.083L42.962,53.667L45.223,55.417L47.484,55.417L49.746,57.75L52.007,27.417L54.268,23.917L56.529,18.667L58.79,19.25L61.051,28.583L63.313,34.417L65.574,38.5L67.835,40.25L70.096,46.083L72.357,47.833L74.618,48.417L76.879,48.417L79.141,44.917L81.402,43.75L83.663,39.083L85.924,43.75L88.185,32.083L90.446,22.75L92.708,29.75L94.969,29.167L97.23,40.25L99.491,37.333L101.752,36.75L104.013,28L106.275,26.25L108.536,21.583L110.797,6.417L110.797,70Z" class="ct-area"></path>
+                                                        <path d="M0,48.417L2.261,43.75L4.522,46.958L6.783,45.5L9.045,42L11.306,44.917L13.567,54.25L15.828,56.583L18.089,51.333L20.35,54.25L22.612,58.333L24.873,53.667L27.134,53.667L29.395,57.75L31.656,58.917L33.917,56.583L36.179,58.333L38.44,57.167L40.701,53.083L42.962,53.667L45.223,55.417L47.484,55.417L49.746,57.75L52.007,27.417L54.268,23.917L56.529,18.667L58.79,19.25L61.051,28.583L63.313,34.417L65.574,38.5L67.835,40.25L70.096,46.083L72.357,47.833L74.618,48.417L76.879,48.417L79.141,44.917L81.402,43.75L83.663,39.083L85.924,43.75L88.185,32.083L90.446,22.75L92.708,29.75L94.969,29.167L97.23,40.25L99.491,37.333L101.752,36.75L104.013,28L106.275,26.25L108.536,21.583L110.797,6.417" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+1.35%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/04fbc487b1a1g0g6e7.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/7e74c2a8a.svg?v=1">
+                                    </div>
+                
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">Silver</div>
+                                    </div>
+                                    <div class="card__title--price">$17.05</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__xagusd">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,37.8L2.167,46.667L4.335,43.05L6.502,43.167L8.67,41.3L10.837,38.267L13.004,43.517L15.172,24.267L17.339,31.733L19.507,36.633L21.674,36.283L23.842,37.1L26.009,37.333L28.176,30.1L30.344,27.067L32.511,31.267L34.679,30.8L36.846,33.6L39.013,42.583L41.181,44.917L43.348,41.3L45.516,38.267L47.683,30.1L49.85,22.75L52.018,26.483L54.185,28.583L56.353,27.533L58.52,26.367L60.688,24.033L62.855,20.3L65.022,23.567L67.19,26.367L69.357,28.817L71.525,21.233L73.692,8.633L75.859,6.3L78.027,2.917L80.194,6.067L82.362,8.867L84.529,8.167L86.696,8.4L88.864,9.333L91.031,13.067L93.199,13.3L95.366,19.483L97.533,17.033L99.701,35L101.868,36.4L104.036,42.7L106.203,21L106.203,70Z" class="ct-area"></path>
+                                                        <path d="M0,37.8L2.167,46.667L4.335,43.05L6.502,43.167L8.67,41.3L10.837,38.267L13.004,43.517L15.172,24.267L17.339,31.733L19.507,36.633L21.674,36.283L23.842,37.1L26.009,37.333L28.176,30.1L30.344,27.067L32.511,31.267L34.679,30.8L36.846,33.6L39.013,42.583L41.181,44.917L43.348,41.3L45.516,38.267L47.683,30.1L49.85,22.75L52.018,26.483L54.185,28.583L56.353,27.533L58.52,26.367L60.688,24.033L62.855,20.3L65.022,23.567L67.19,26.367L69.357,28.817L71.525,21.233L73.692,8.633L75.859,6.3L78.027,2.917L80.194,6.067L82.362,8.867L84.529,8.167L86.696,8.4L88.864,9.333L91.031,13.067L93.199,13.3L95.366,19.483L97.533,17.033L99.701,35L101.868,36.4L104.036,42.7L106.203,21" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+0.43%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/04cbb5dc44e0e8e0j5.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/77152451e.svg?v=1">
+                                    </div>
+                
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">iShares 20+ Year Treasury Bond ETF</div>
+                                    </div>
+                                    <div class="card__title--price">$138.16</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__tlt">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,43.663L2.244,44.362L4.487,48.65L6.731,48.737L8.974,53.112L11.218,54.688L13.462,53.2L15.705,53.2L17.949,53.025L20.193,52.675L22.436,53.55L24.68,54.775L26.923,53.725L29.167,56.263L31.411,59.15L33.654,61.512L35.898,58.975L38.142,56.788L40.385,56.35L42.629,55.475L44.872,56.525L47.116,55.825L49.36,54.163L51.603,46.112L53.847,43.837L56.091,43.837L58.334,41.388L60.578,43.575L62.821,42.7L65.065,43.225L67.309,45.675L69.552,47.425L71.796,47.688L74.04,47.863L76.283,50.05L78.527,53.9L80.77,56.263L83.014,54.862L85.258,53.112L87.501,8.575L89.745,5.425L91.989,7.525L94.232,6.737L96.476,8.575L98.719,5.775L100.963,6.65L103.207,6.912L105.45,9.275L107.694,7.875L109.938,0.175L109.938,70Z" class="ct-area"></path>
+                                                        <path d="M0,43.663L2.244,44.362L4.487,48.65L6.731,48.737L8.974,53.112L11.218,54.688L13.462,53.2L15.705,53.2L17.949,53.025L20.193,52.675L22.436,53.55L24.68,54.775L26.923,53.725L29.167,56.263L31.411,59.15L33.654,61.512L35.898,58.975L38.142,56.788L40.385,56.35L42.629,55.475L44.872,56.525L47.116,55.825L49.36,54.163L51.603,46.112L53.847,43.837L56.091,43.837L58.334,41.388L60.578,43.575L62.821,42.7L65.065,43.225L67.309,45.675L69.552,47.425L71.796,47.688L74.04,47.863L76.283,50.05L78.527,53.9L80.77,56.263L83.014,54.862L85.258,53.112L87.501,8.575L89.745,5.425L91.989,7.525L94.232,6.737L96.476,8.575L98.719,5.775L100.963,6.65L103.207,6.912L105.45,9.275L107.694,7.875L109.938,0.175" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+0.91%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/04b240cdd9f7f4j0c5.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/7efba9001.svg?v=1">
+                                    </div>
+                
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">Cintas Corp</div>
+                                    </div>
+                                    <div class="card__title--price">$258.67</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__ctasus">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,52.657L2.213,56.122L4.425,60.48L6.638,64.872L8.851,59.64L11.063,58.432L13.276,53.795L15.489,49.648L17.702,49.84L19.914,46.41L22.127,41.51L24.34,38.833L26.552,35.472L28.765,30.012L30.978,28L33.19,26.04L35.403,23.17L37.616,21.7L39.828,24.815L42.041,23.398L44.254,23.135L46.467,18.13L48.679,18.83L50.892,20.755L53.105,22.155L55.317,23.1L57.53,23.31L59.743,21.945L61.955,23.695L64.168,22.715L66.381,23.257L68.593,20.93L70.806,21.945L73.019,20.265L75.232,23.345L77.444,22.278L79.657,22.085L81.87,24.185L84.082,20.073L86.295,25.253L88.508,20.44L90.72,11.48L92.933,9.94L95.146,3.448L97.358,3.85L99.571,1.068L101.784,3.728L103.996,6.195L106.209,4.725L108.422,6.615L108.422,70Z" class="ct-area"></path>
+                                                        <path d="M0,52.657L2.213,56.122L4.425,60.48L6.638,64.872L8.851,59.64L11.063,58.432L13.276,53.795L15.489,49.648L17.702,49.84L19.914,46.41L22.127,41.51L24.34,38.833L26.552,35.472L28.765,30.012L30.978,28L33.19,26.04L35.403,23.17L37.616,21.7L39.828,24.815L42.041,23.398L44.254,23.135L46.467,18.13L48.679,18.83L50.892,20.755L53.105,22.155L55.317,23.1L57.53,23.31L59.743,21.945L61.955,23.695L64.168,22.715L66.381,23.257L68.593,20.93L70.806,21.945L73.019,20.265L75.232,23.345L77.444,22.278L79.657,22.085L81.87,24.185L84.082,20.073L86.295,25.253L88.508,20.44L90.72,11.48L92.933,9.94L95.146,3.448L97.358,3.85L99.571,1.068L101.784,3.728L103.996,6.195L106.209,4.725L108.422,6.615" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+2.63%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/04a5acba80j5i1b5h5.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/5fc04cd695d8g4j3f3.svg?v=1">
+                                    </div>
+                
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">Beyond Meat Inc</div>
+                                    </div>
+                                    <div class="card__title--price">$80.63</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__bynd">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,44.887L2.205,43.663L4.409,44.392L6.614,40.454L8.819,41.387L11.024,40.25L13.228,44.042L15.433,40.775L17.638,41.533L19.842,40.6L22.047,42.117L24.252,42.817L26.457,43.021L28.661,43.692L30.866,43.546L33.071,43.633L35.276,47.775L37.48,51.1L39.685,54.571L41.89,54.017L44.094,55.446L46.299,52.15L48.504,53.2L50.709,55.475L52.913,55.563L55.118,61.192L57.323,60.317L59.527,56.496L61.732,54.046L63.937,53.492L66.142,54.658L68.346,52.033L70.551,51.683L72.756,50.283L74.96,52.354L77.165,49.875L79.37,48.65L81.575,47.833L83.779,46.375L85.984,4.638L88.189,8.371L90.393,1.4L92.598,2.129L94.803,12.542L97.008,15.108L99.212,14.671L101.417,19.104L103.622,21.962L105.827,22.196L108.031,20.971L108.031,70Z" class="ct-area"></path>
+                                                        <path d="M0,44.887L2.205,43.663L4.409,44.392L6.614,40.454L8.819,41.387L11.024,40.25L13.228,44.042L15.433,40.775L17.638,41.533L19.842,40.6L22.047,42.117L24.252,42.817L26.457,43.021L28.661,43.692L30.866,43.546L33.071,43.633L35.276,47.775L37.48,51.1L39.685,54.571L41.89,54.017L44.094,55.446L46.299,52.15L48.504,53.2L50.709,55.475L52.913,55.563L55.118,61.192L57.323,60.317L59.527,56.496L61.732,54.046L63.937,53.492L66.142,54.658L68.346,52.033L70.551,51.683L72.756,50.283L74.96,52.354L77.165,49.875L79.37,48.65L81.575,47.833L83.779,46.375L85.984,4.638L88.189,8.371L90.393,1.4L92.598,2.129L94.803,12.542L97.008,15.108L99.212,14.671L101.417,19.104L103.622,21.962L105.827,22.196L108.031,20.971" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+2.59%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header" style="background-image: url('lp/mobile/assets/images/06f0414365c6c7b0d6.jpg?v=1')">
+                                    
+                
+                                    <div class="card__header--icon">
+                                        <img class="card__header--logo" src="lp/mobile/assets/images/7f39aaacb.svg?v=1">
+                                    </div>
+                
+                                </div>
+                                <div class="card__title">
+                                    <div class="card__title--wrap">
+                                        <div class="card__title--name">DROPBOX INC</div>
+                                    </div>
+                                    <div class="card__title--price">$19.25</div>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__body--chart">
+                                        <div id="chart__dbx">
+                
+                                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="70" class="ct-chart-line" style="width: 100%; height: 70px;">
+                                                <g class="ct-grids"></g>
+                                                <g>
+                                                    <g class="ct-series ct-series-a">
+                                                        <path d="M0,70L0,57.75L2.18,58.975L4.36,59.675L6.54,58.625L8.721,56.525L10.901,57.575L13.081,57.925L15.261,58.8L17.441,58.625L19.621,59.15L21.802,58.625L23.982,58.1L26.162,56.7L28.342,51.275L30.522,51.8L32.702,50.313L34.883,50.75L37.063,49.175L39.243,50.925L41.423,51.975L43.603,52.15L45.783,46.2L47.964,16.187L50.144,19.425L52.324,28.787L54.504,28.525L56.684,26.338L58.864,27.125L61.045,23.363L63.225,23.713L65.405,17.412L67.585,17.325L69.765,21.263L71.945,18.55L74.126,16.625L76.306,15.225L78.486,17.675L80.666,17.85L82.846,19.425L85.026,27.387L87.207,26.25L89.387,21.175L91.567,24.5L93.747,23.45L95.927,26.25L98.107,28.175L100.288,31.675L102.468,32.725L104.648,29.662L106.828,29.925L106.828,70Z" class="ct-area"></path>
+                                                        <path d="M0,57.75L2.18,58.975L4.36,59.675L6.54,58.625L8.721,56.525L10.901,57.575L13.081,57.925L15.261,58.8L17.441,58.625L19.621,59.15L21.802,58.625L23.982,58.1L26.162,56.7L28.342,51.275L30.522,51.8L32.702,50.313L34.883,50.75L37.063,49.175L39.243,50.925L41.423,51.975L43.603,52.15L45.783,46.2L47.964,16.187L50.144,19.425L52.324,28.787L54.504,28.525L56.684,26.338L58.864,27.125L61.045,23.363L63.225,23.713L65.405,17.412L67.585,17.325L69.765,21.263L71.945,18.55L74.126,16.625L76.306,15.225L78.486,17.675L80.666,17.85L82.846,19.425L85.026,27.387L87.207,26.25L89.387,21.175L91.567,24.5L93.747,23.45L95.927,26.25L98.107,28.175L100.288,31.675L102.468,32.725L104.648,29.662L106.828,29.925" class="ct-line"></path>
+                                                    </g>
+                                                </g>
+                                                <g class="ct-labels"></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="card__body--change">
+                                        <div class="change__percent">+4.33%</div>
+                                        <div class="change__period">1D change</div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
                 </div>
             </div>
             <div class="why-invest">
@@ -1772,18 +700,18 @@
                     <div class="features__slider owl-carousel" id="js-features">
                         <div class="features__item">
                             <div class="features__title">Use smart Newsfeed to make informed decisions</div>
-                            <div class="features__img"><img class="js-change-img-src" data-src="https://static.cdnpub.info/lp/mobile/assets/images/feature_1--ios.png" src="" alt="Use smart Newsfeed to make informed decisions"></div>
+                            <div class="features__img"><img class="js-change-img-src" data-src="lp/mobile/assets/images/feature_1--ios.png" src="" alt="Use smart Newsfeed to make informed decisions"></div>
                         </div>
                         <div class="features__item">
                             <div class="features__title">Invest wisely with a variety of indicators</div>
-                            <div class="features__img"><img class="js-change-img-src" data-src="https://static.cdnpub.info/lp/mobile/assets/images/feature_2--ios.png" src="" alt="Invest wisely with a variety of indicators"></div>
+                            <div class="features__img"><img class="js-change-img-src" data-src="lp/mobile/assets/images/feature_2--ios.png" src="" alt="Invest wisely with a variety of indicators"></div>
                         </div>
                         <div class="features__item">
                             <div class="features__title">Harness the power of a supportive community</div>
-                            <div class="features__img"><img class="js-change-img-src" data-src="https://static.cdnpub.info/lp/mobile/assets/images/feature_3--ios.png" src="" alt="Harness the power of a supportive community"></div>
+                            <div class="features__img"><img class="js-change-img-src" data-src="lp/mobile/assets/images/feature_3--ios.png" src="" alt="Harness the power of a supportive community"></div>
                         </div>
                     </div>
-                    <div class="btn-non-regulated"><a class="btn access__btn js-btn-app" href="#reg"><span class="hide-desktop">Download app</span><span class="show-desktop">Get started for free</span><svg width="12px" height="14px"><use xlink:href="../assets/images/icon.svg?v=2b39980#icon_icon_download"/></svg></a></div>
+                    <div class="btn-non-regulated"><a class="btn access__btn js-btn-app" href="#reg"><span class="hide-desktop">Download app</span><span class="show-desktop">Get started for free</span></a></div>
                 </div>
             </div>
             <div class="video">
@@ -1792,7 +720,8 @@
                     <div class="section-subtitle">We all have to start somewhere. Let us help get you on the right track as you start your investing journey. With our video tutorials section you'll be ready to start in no time.</div>
                     <div class="video__wrap">
                         <div class="video__block">
-                            <a class="video__item video__item--1" href="https://player.vimeo.com/video/293962934">
+                            <!-- id in src is a divider -->
+                            <a class="video__item video__item--1" href="https://www.youtube.com/embed/id-im-YT43aDwU">
                                 <div class="video__label">Fundamental Analysis</div>
                                 <div class="video__title">How to use news in trading?</div>
                                 <div class="video__time">02:03</div>
@@ -1800,7 +729,7 @@
                             </a>
                         </div>
                         <div class="video__block">
-                            <a class="video__item video__item--2" href="https://player.vimeo.com/video/178809539">
+                            <a class="video__item video__item--2" href="https://www.youtube.com/embed/id-im-YT43aDwU">
                                 <div class="video__label">Technical Analysis</div>
                                 <div class="video__title">How to use technical indicators?</div>
                                 <div class="video__time">04:04</div>
@@ -1850,7 +779,6 @@
                     </div>
                 </div>
             </div>
-            <div class="round-btn__btn btn-non-regulated"><a class="btn access__btn js-btn-app" href="#reg"><span class="hide-desktop">Download app</span><span class="show-desktop">Get started for free</span><svg width="12px" height="14px"><use xlink:href="../assets/images/icon.svg?v=2b39980#icon_icon_download"/></svg></a></div>
         </div>
         <div class="get-started">
             <div class="wrap">
@@ -1914,36 +842,46 @@
             <div class="numbers__list">
                 <div class="numbers__item numbers__item--1 rtl-direction">
                     <div class="icon">
-                        <svg width="32px" height="32px">
-                            <use xlink:href="../assets/images/icon.svg?v=2b39980#icon_icon_users" />
-                        </svg>
+                        <span style="display: block; width: 32px; height: 32px">
+                                <svg id="icon_icon_users" viewBox="0 0 32 32" width="100%" height="100%">
+                                        <g fill="none" fill-rule="evenodd"><circle fill="#2F374E" cx="16" cy="16" r="16"></circle><path d="M13.61 16.005A3.98 3.98 0 0 0 16 16.8a3.98 3.98 0 0 0 2.39-.795c.341.144.662.32.96.524 1.22.838 2.04 2.146 2.14 3.633.006.102.01.206.01.31a.861.861 0 0 1-.57.81c-1.337.481-2.97.722-4.9.722-1.936 0-3.59-.242-4.96-.727a.854.854 0 0 1-.57-.805c0-1.982 1.274-3.69 3.11-4.467zM16 10.004a2.753 2.753 0 0 1 2.75 2.75 2.753 2.753 0 0 1-2.75 2.75 2.753 2.753 0 0 1-2.75-2.75 2.753 2.753 0 0 1 2.75-2.75z" fill="#FFF"></path></g>
+                                      </svg>
+                        </span>
                     </div>
                     <div class="number"><span class="number--long" id="js-platform-population"></span></div>
                     <div class="desc">Registered users</div>
                 </div>
                 <div class="numbers__item numbers__item--2 rtl-direction">
                     <div class="icon">
-                        <svg width="32px" height="32px">
-                            <use xlink:href="../assets/images/icon.svg?v=2b39980#icon_icon_investors" />
-                        </svg>
+                        <span style="display: block; width: 32px; height: 32px">
+
+                            <svg id="icon_icon_investors" viewBox="0 0 32 32" width="100%" height="100%">
+                                    <g fill="none" fill-rule="evenodd"><circle fill="#2F374E" cx="16" cy="16" r="16"></circle><path d="M18.988 12.599v-1.407c0-.69-.537-1.192-1.197-1.192h-3.593c-.66 0-1.198.501-1.198 1.192v1.407h5.988zm-1.197-.185h-3.593v-.907a.5.5 0 0 1 .5-.5h2.593a.5.5 0 0 1 .5.5v.907z" fill="#FFF" fill-rule="nonzero"></path><path d="M11 12h10a1 1 0 0 1 1 1v1.9H10V13a1 1 0 0 1 1-1zM14.711 16v.333a.5.5 0 0 0 .5.5h1.572a.5.5 0 0 0 .5-.5V16H22v4a1 1 0 0 1-1 1H11a1 1 0 0 1-1-1v-4h4.711z" fill="#FFF" fill-rule="nonzero"></path></g>
+                                    </svg>
+                        </span>
                     </div>
                     <div class="number"><span class="number--long">1 800 000+</span></div>
                     <div class="desc">Active investors daily</div>
                 </div>
                 <div class="numbers__item numbers__item--3 rtl-direction">
                     <div class="icon">
-                        <svg width="32px" height="32px">
-                            <use xlink:href="../assets/images/icon.svg?v=2b39980#icon_icon_volume" />
-                        </svg>
+                            <span style="display: block; width: 32px; height: 32px">
+                                    <svg id="icon_icon_volume" viewBox="0 0 32 32" width="100%" height="100%">
+                                            <g fill="none" fill-rule="evenodd"><circle fill="#2F374E" cx="16" cy="16" r="16"></circle><path d="M15.5 13.273h1a.5.5 0 0 1 .5.5V21.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7.727a.5.5 0 0 1 .5-.5zm4-3.273h1a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5zm-8 6.545h1a.5.5 0 0 1 .5.5V21.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-4.455a.5.5 0 0 1 .5-.5z" fill="#FFF"></path></g>
+                                          </svg>
+                        </span>
+
                     </div>
                     <div class="number"><span class="number--long">$380 000 000</span></div>
                     <div class="desc">Monthly investing volume</div>
                 </div>
                 <div class="numbers__item numbers__item--4 rtl-direction">
                     <div class="icon">
-                        <svg width="32px" height="32px">
-                            <use xlink:href="../assets/images/icon.svg?v=2b39980#icon_icon_withdraw" />
-                        </svg>
+                            <span style="display: block; width: 32px; height: 32px">
+                                    <svg id="icon_icon_withdraw" viewBox="0 0 32 32" width="100%" height="100%">
+                                            <g fill="none" fill-rule="evenodd"><circle fill="#2F374E" cx="16" cy="16" r="16"></circle><path d="M20.302 12.787l-5.08 5.117a.5.5 0 0 1-.71 0l-.443-.447a.5.5 0 0 1 0-.705l5.075-5.113H17.54a.5.5 0 0 1-.5-.5V10.5a.5.5 0 0 1 .5-.5h3.42a1 1 0 0 1 1 1v3.416a.5.5 0 0 1-.5.5h-.657a.5.5 0 0 1-.5-.5v-1.629zM14.387 10a.5.5 0 0 1 .5.5v.64a.5.5 0 0 1-.5.5h-2.729v8.726h8.644v-2.772a.5.5 0 0 1 .5-.5h.662a.5.5 0 0 1 .5.494L22 20.991a1 1 0 0 1-1 1.011H11a1 1 0 0 1-1-1V11a1 1 0 0 1 1-1h3.387z" fill="#FFF"></path></g>
+                                          </svg>
+                                <span>
                     </div>
                     <div class="number"><span class="number--long">$10 000 000</span></div>
                     <div class="desc">Withdrawn each month</div>
@@ -1956,20 +894,36 @@
             <div class="footer__copyright">&copy; 2019</div>
         </div>
     </div>
-    <noscript id="deferred-styles">
         <link href="lp/mobile/assets/styles/common_v_24a89bc.css" rel="stylesheet" type="text/css">
-    </noscript>
-    <script>
-        var loadDeferredStyles = function() {
-                var e = document.getElementById("deferred-styles"),
-                    t = document.createElement("div");
-                t.innerHTML = e.textContent, document.body.appendChild(t), e.parentElement.removeChild(e)
-            },
-            raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
-        raf ? raf(function() {
-            window.setTimeout(loadDeferredStyles, 0)
-        }) : window.addEventListener("load", loadDeferredStyles);
-    </script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+  $("#js-cards").owlCarousel({
+      items: 5,
+      loop: true,
+      center: true,
+      responsive:{
+        0 : {
+            items : 1,
+        },
+        500 : {
+            items : 2,
+        },
+        800 : {
+            items : 3,
+        },
+        1000 : {
+            items : 4,
+        },
+        1200 : {
+            items : 5,
+        },
+      }
+  });
+});
+</script>
     <script src="lp/mobile/assets/scripts/change_imgs_v_ccfc7e4.js" defer="defer" async></script>
     <script src="lp/mobile/assets/scripts/vendor_v_7fcc5c9.js" defer="defer" async></script>
 </body>
