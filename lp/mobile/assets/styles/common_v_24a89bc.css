@@ -410,9 +410,13 @@ body {
 }
 
 .nav {
-    overflow: visible
+	overflow: visible;
+	background: #22293d;
+	
 }
-
+.nav .logo {
+	display: flex;
+}
 .nav__lang {
     position: relative;
     -webkit-transition: color .3s ease-out;
@@ -3683,7 +3687,8 @@ html:lang(ar) .assets .wrap {
         fill: #000
     }
     .nav {
-        background-color: #fff;
+		/* background-color: #fff; */
+		
         padding-top: 13px;
         padding-bottom: 13px
     }
