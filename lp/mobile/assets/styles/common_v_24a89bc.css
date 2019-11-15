@@ -767,11 +767,17 @@ body {
 }
 
 .nav__btn {
-    display: none
+
 }
 
 .nav__btn .btn {
-    padding: 9px 30px
+    padding: 9px 30px;
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    z-index: 5;
 }
 
 .advantages__item,
@@ -3691,6 +3697,11 @@ html:lang(ar) .assets .wrap {
 		
         padding-top: 13px;
         padding-bottom: 13px
+    }
+    .btn.access__btn.js-btn-app {
+        position: static;
+        width: auto;
+        transform: translateX(0)
     }
     .desktop .nav__btn {
         display: block;
